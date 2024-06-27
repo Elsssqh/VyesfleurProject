@@ -17,7 +17,7 @@
 
 		<h2>Product title : {{$data->product->title}}</h2>
 
-		<h2>Price : {{$data->product->price}}</h2>
+		<h2>Price : Rp {{$data->product->price}}</h2>
 
 		<img height="250" width="300" src="products/{{$data->product->image}}">
 

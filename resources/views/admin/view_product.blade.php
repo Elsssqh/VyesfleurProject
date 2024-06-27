@@ -125,7 +125,7 @@
 
                   <td>{{$products->category}}</td>
 
-                  <td>{{$products->price}}</td>
+                  <td>Rp {{$products->price}}</td>
 
                   <td>{{$products->quantity}}</td>
 
