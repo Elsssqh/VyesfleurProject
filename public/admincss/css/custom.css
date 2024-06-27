@@ -1,0 +1,10 @@
+/* your styles go here */
+*{
+    font-family: 'Libre Baskerville', serif;
+    background-color: white!important;
+    color: #4d0026 !important;
+  }
+  
+.label{
+    color: #4d0026 !important;
+}
