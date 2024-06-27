@@ -113,7 +113,7 @@
                         <td>{{ $order->rec_address }}</td>
                         <td>{{ $order->phone }}</td>
                         <td>{{ $order->product->title }}</td>
-                        <td>{{ $order->product->price }}</td>
+                        <td>Rp {{ $order->product->price }}</td>
                         <td>
                             @if($order->product->image)
                                 <img width="150" src="{{ asset('products/' . $order->product->image) }}">
