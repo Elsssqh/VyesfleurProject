@@ -273,4 +273,16 @@ class AdminController extends Controller
             return $pdf->download('invoice.pdf');
 
     }
+
+
+    public function searchOrders(Request $request)
+    {
+        $search = $request->input('search');
+        
+        $orders = Order::whereHas('user', function($query) use ($search) {
+            $query->where('name', 'like', '%'.$search.'%');
+        })->with('product')->get();
+
+        return view('admin.order', ['data' => $orders]);
+    }
 }
