@@ -92,7 +92,7 @@ Route::controller(HomeController::class)->group(function(){
     Route::post('stripe/{value}', 'stripePost')->name('stripe.post');
 });
 
-
+Route::post('/products/sort', [HomeController::class, 'sortProducts'])->name('products.sort');
 
 
 

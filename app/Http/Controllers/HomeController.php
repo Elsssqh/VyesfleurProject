@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
+    
     public function index()
     {
         $user = User::where('usertype','user')->get()->count();
@@ -32,6 +33,38 @@ class HomeController extends Controller
 
         return view('admin.index',compact('user','product','order','deliverd'));  
     }
+
+    public function productsIndex()
+{
+    $products = Product::all();
+    return view('products.index', compact('products'));
+}
+
+public function sortProducts(Request $request)
+{
+    $sortType = $request->input('sort');
+
+    switch ($sortType) {
+        case 'title_asc':
+            $products = Product::orderBy('title', 'asc')->get();
+            break;
+        case 'title_desc':
+            $products = Product::orderBy('title', 'desc')->get();
+            break;
+        case 'price_asc':
+            $products = Product::orderBy('price', 'asc')->get();
+            break;
+        case 'price_desc':
+            $products = Product::orderBy('price', 'desc')->get();
+            break;
+        default:
+            $products = Product::all();
+            break;
+    }
+
+    return response()->json(['products' => $products]);
+}
+
 
 
     public function home()
