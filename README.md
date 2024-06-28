@@ -1,4 +1,23 @@
-PROJECT VYES FLEUR 
+PROJECT VYES FLEUR
+
+TOTAL CRUD: 5
+- users
+- products
+- orders
+- categories
+- carts
+
+Total tambahan vitur:
+- Fitur Search pada user page
+- Fitur Peta pada user page
+- Fitur sort by alphabet pada user page product
+- Fitur sort by price pada user page product
+- Fitur Calculate Payment pada user page
+- Fitur calculate quatity pada product
+- Fitur search pada admin page view product
+- Fitur search pada admin page orders 
+- fitur download PDF product pada admin page
+dan lain sebagainya.
 
 Asal Instansi:
 Prodi Teknik Informatika, Fakultas Teknologi Informasi, Universitas Tarumanagara
